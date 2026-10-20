@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Tenis & Sports Club Craiova | Terenuri Tenis, Fotbal & Bar Evenimente Outdoor</title>
+    <meta name="description" content="Complex sportiv premium în Craiova. Terenuri de tenis din zgură profesională, terenuri de fotbal sintetic cu nocturnă LED și bar/terasă outdoor de închiriat pentru evenimente private.">
+    <meta name="keywords" content="tenis craiova, teren fotbal craiova, inchiriere bar evenimente craiova, baza sportiva craiova, terenuri zgura, fotbal sintetic nocturna">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tenis & Sports Club Craiova - Sport & Evenimente Outdoor">
+    <meta property="og:description" content="Rezervă terenuri de tenis și fotbal sau închiriază barul outdoor pentru petrecerea ta exclusivă în Craiova!">
+    <meta property="og:image" content="images/hero.png">
+    <meta property="og:url" content="https://maps.app.goo.gl/x16UXfUmBnCwBcjD6">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand-logo">
+                <div class="logo-icon"><i data-lucide="trophy"></i></div>
+                <div class="logo-text">
+                    <span class="brand-name">TENIS & SPORTS</span>
+                    <span class="brand-sub">CLUB CRAIOVA</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#acasa" class="nav-link active"><i data-lucide="home"></i> Acasă</a>
+                <a href="#terenuri" class="nav-link"><i data-lucide="circle-dot"></i> Terenuri</a>
+                <a href="#bar-evenimente" class="nav-link highlight-link"><i data-lucide="glass-water"></i> Bar & Evenimente</a>
+                <a href="#tarife" class="nav-link"><i data-lucide="tag"></i> Tarife</a>
+                <a href="#galerie" class="nav-link"><i data-lucide="image"></i> Galerie</a>
+                <a href="#contact" class="nav-link"><i data-lucide="map-pin"></i> Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="btn btn-primary" onclick="openBookingModal('tenis')">
+                    <i data-lucide="calendar"></i> Rezervă Teren
+                </button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Deschide meniu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="acasa">
+        <div class="hero-backdrop" style="background-image: url('images/hero.png');"></div>
+        <div class="hero-overlay"></div>
+        
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge reveal-up">
+                    <span class="pulse-dot"></span> BAZĂ SPORTIVĂ & PARTY OUTDOOR CRAIOVA
+                </div>
+                
+                <h1 class="hero-title reveal-up reveal-delay-1">
+                    PASIUNE PENTRU SPORT.<br>
+                    <span class="highlight-text">ATMOSFERĂ PREMIUM.</span>
+                </h1>
+                
+                <p class="hero-description reveal-up reveal-delay-2">
+                    Baza ta sportivă de top din Craiova îți oferă <strong>terenuri profesionale de tenis pe zgură</strong>, 
+                    <strong>terenuri de minifotbal sintetic cu nocturnă LED</strong> și un <strong>Bar Outdoor cu terasă spațioasă</strong>, 
+                    pregătit pentru închiriere exclusivă la petreceri private & evenimente de neuitat.
+                </p>
+
+                <div class="hero-buttons reveal-up reveal-delay-3">
+                    <button class="btn btn-primary btn-lg" onclick="openBookingModal('tenis')">
+                        <i data-lucide="check-circle-2"></i> Rezervă Teren Tenis / Fotbal
+                    </button>
+                    <button class="btn btn-secondary btn-lg" onclick="openEventModal()">
+                        <i data-lucide="party-popper"></i> Închiriază Barul pt Evenimente
+                    </button>
+                    <a href="https://maps.app.goo.gl/x16UXfUmBnCwBcjD6" target="_blank" class="btn btn-outline btn-lg">
+                        <i data-lucide="navigation"></i> Deschide pe Hartă
+                    </a>
+                </div>
+
+                <!-- Stats Counters -->
+                <div class="hero-stats reveal-up reveal-delay-4">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i data-lucide="trophy"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">Terenuri Tenis Zgură</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i data-lucide="shield"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">Terenuri Fotbal Sintetic</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i data-lucide="beer"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-number">150+</span>
+                            <span class="stat-label">Capacitate Bar Outdoor</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i data-lucide="sun-medium"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-number">LED</span>
+                            <span class="stat-label">Nocturnă High-Power</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Booking Bar -->
+    <section class="quick-booking-section">
+        <div class="container">
+            <div class="booking-bar-card glass-panel reveal-up">
+                <div class="booking-bar-title">
+                    <i data-lucide="zap" class="accent-icon"></i>
+                    <div>
+                        <h3>Rezervare Rapidă în 30 de Secunde</h3>
+                        <p>Alege activitatea dorită și vezi disponibilitatea instant pe WhatsApp</p>
+                    </div>
+                </div>
+                
+                <form id="quickBookingForm" class="booking-bar-form" onsubmit="handleQuickBooking(event)">
+                    <div class="form-group">
+                        <label><i data-lucide="activity"></i> Tip Activitate</label>
+                        <select id="quickSport" onchange="updateQuickPrice()">
+                            <option value="tenis">Tenis de Câmp (Zgură)</option>
+                            <option value="fotbal">Minifotbal (Sintetic)</option>
+                            <option value="bar">Închiriere Bar Outdoor</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i data-lucide="calendar"></i> Data</label>
+                        <input type="date" id="quickDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i data-lucide="clock"></i> Interval Orar</label>
+                        <select id="quickTime" onchange="updateQuickPrice()">
+                            <option value="10:00 - 11:00">10:00 - 11:00 (Zi)</option>
+                            <option value="11:00 - 12:00">11:00 - 12:00 (Zi)</option>
+                            <option value="16:00 - 17:00">16:00 - 17:00 (Zi)</option>
+                            <option value="18:00 - 19:00">18:00 - 19:00 (Apus)</option>
+                            <option value="19:00 - 20:00">19:00 - 20:00 (Nocturnă)</option>
+                            <option value="20:00 - 21:00">20:00 - 21:00 (Nocturnă)</option>
+                            <option value="21:00 - 22:00">21:00 - 22:00 (Nocturnă)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group price-display">
+                        <label><i data-lucide="coins"></i> Estimare Tarif</label>
+                        <div class="price-tag" id="quickPriceDisplay">60 LEI / Oră</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i data-lucide="send"></i> Trimite pe WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="section-padding" id="terenuri">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <span class="badge-sub">FACILITĂȚI SPORTIVE</span>
+                <h2 class="section-title">Terenuri Premium la Standarde Înalte</h2>
+                <p class="section-subtitle">Pregătite zilnic pentru meciuri amicale, antrenamente individuale sau turnee amatori și firme</p>
+            </div>
+
+            <div class="facilities-grid">
+                <!-- Tennis Court Card -->
+                <div class="facility-card glass-panel reveal-up reveal-delay-1">
+                    <div class="facility-image">
+                        <img src="images/tennis.png" alt="Terenuri de Tenis Craiova">
+                        <span class="facility-badge badge-orange"><i data-lucide="trophy"></i> Zgură Premium</span>
+                    </div>
+                    <div class="facility-body">
+                        <h3><i data-lucide="circle-dot"></i> Terenuri de Tenis de Câmp</h3>
+                        <p>Terenuri din zgură roșie menținută impecabil, cu drenaj rapid și suprafață elastică ce protejează articulațiile.</p>
+                        
+                        <ul class="feature-list">
+                            <li><i data-lucide="check"></i> Zgură profesională cu filtrare rapidă a apei</li>
+                            <li><i data-lucide="check"></i> Nocturnă LED puternică fără umbre deranjante</li>
+                            <li><i data-lucide="check"></i> Rachete & mingi disponibile pentru închiriere</li>
+                            <li><i data-lucide="check"></i> Antrenori personali & cursuri pentru copii/adulți</li>
+                        </ul>
+
+                        <div class="facility-footer">
+                            <div class="facility-price">De la <span>60 LEI</span> / oră</div>
+                            <button class="btn btn-outline-primary" onclick="openBookingModal('tenis')">
+                                Rezervă Tenis <i data-lucide="arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Football Pitch Card -->
+                <div class="facility-card glass-panel reveal-up reveal-delay-2">
+                    <div class="facility-image">
+                        <img src="images/football.png" alt="Teren de Fotbal Sintetic Craiova">
+                        <span class="facility-badge badge-green"><i data-lucide="shield-check"></i> Gazon Sintetic Pro</span>
+                    </div>
+                    <div class="facility-body">
+                        <h3><i data-lucide="sparkles"></i> Terenuri de Minifotbal</h3>
+                        <p>Gazon sintetic de ultimă generație cu infill ecologic, ideal pentru meciurile 5v5 sau 7v7 cu prietenii sau colegii de muncă.</p>
+                        
+                        <ul class="feature-list">
+                            <li><i data-lucide="check"></i> Suprafață moale antialunecare cu absorbție la șocuri</li>
+                            <li><i data-lucide="check"></i> Plasă de protecție perimetrală & porți profesionale</li>
+                            <li><i data-lucide="check"></i> Iluminat nocturn stadion LED de mare putere</li>
+                            <li><i data-lucide="check"></i> Vestiare spațioase cu dușuri calde & dulapuri</li>
+                        </ul>
+
+                        <div class="facility-footer">
+                            <div class="facility-price">De la <span>140 LEI</span> / oră</div>
+                            <button class="btn btn-outline-primary" onclick="openBookingModal('fotbal')">
+                                Rezervă Fotbal <i data-lucide="arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bar & Outdoor Events Section -->
+    <section class="section-padding bar-event-section" id="bar-evenimente">
+        <div class="bar-backdrop" style="background-image: url('images/bar.png');"></div>
+        <div class="bar-overlay"></div>
+
+        <div class="container relative-z">
+            <div class="event-banner-grid">
+                <div class="event-text-side reveal-left">
+                    <span class="badge-sub badge-gold"><i data-lucide="party-popper"></i> EXCLUSIVITATE & PETRECERI OUTDOOR</span>
+                    <h2 class="event-hero-title">Închiriază Barul & Terasa În Aer Liber Pentru Evenimentul Tău!</h2>
+                    <p class="event-hero-subtitle">
+                        Organizezi o zi de naștere, un majorat, o petrecere privată, un teambuilding de firmă sau dorești să vizionați un meci important cu prietenii? 
+                        Barul nostru exterior îți pune la dispoziție o zonă verde generoasă, bar complet utilat și atmosferă unică!
+                    </p>
+
+                    <div class="event-features-cards">
+                        <div class="event-feat-item">
+                            <div class="feat-icon"><i data-lucide="glass-water"></i></div>
+                            <div>
+                                <h4>Bar Complet Utilat</h4>
+                                <p>Espressor, frigidere profesionale, dozatoare de bere, mixer & gheață la discreție.</p>
+                            </div>
+                        </div>
+                        <div class="event-feat-item">
+                            <div class="feat-icon"><i data-lucide="flame"></i></div>
+                            <div>
+                                <h4>Zonă BBQ & Grătar Outdoor</h4>
+                                <p>Spațiu special amenajat pentru grătar, mese de cocktail și foișoare acoperite.</p>
+                            </div>
+                        </div>
+                        <div class="event-feat-item">
+                            <div class="feat-icon"><i data-lucide="music-4"></i></div>
+                            <div>
+                                <h4>Sistem Audio & Lumini Ambientale</h4>
+                                <p>Boxe high-fidelity bluetooth, ghirlande luminoase nocturne și decor de petrecere.</p>
+                            </div>
+                        </div>
+                        <div class="event-feat-item">
+                            <div class="feat-icon"><i data-lucide="users"></i></div>
+                            <div>
+                                <h4>Combinație cu Meciuri & Turnee</h4>
+                                <p>Puteți închiria terenul de fotbal/tenis la pachet cu barul pentru un campionat privat!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-action-box">
+                        <button class="btn btn-gold btn-lg" onclick="openEventModal()">
+                            <i data-lucide="calculator"></i> Calculează Preț & Solicită Închiriere Bar
+                        </button>
+                        <a href="https://wa.me/40700000000?text=Buna%20ziua,%20doresc%20detalii%20despre%20inchirierea%20barului%20pentru%20un%20eveniment" target="_blank" class="btn btn-outline-light btn-lg">
+                            <i data-lucide="message-circle"></i> Discută pe WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="event-card-side reveal-right">
+                    <div class="event-calculator-card glass-panel-gold">
+                        <div class="card-gold-header">
+                            <h3><i data-lucide="sparkles"></i> Simplu & Exclusivist</h3>
+                            <p>Pachete de închiriere Bar Outdoor</p>
+                        </div>
+
+                        <div class="package-list">
+                            <div class="pkg-item">
+                                <div class="pkg-header">
+                                    <h4>Pachet Afternoon Chill</h4>
+                                    <span class="pkg-price">De la 500 LEI</span>
+                                </div>
+                                <p>Închiriere terasă bar între 14:00 - 19:00. Acces grătar, muzică și mese de party.</p>
+                            </div>
+
+                            <div class="pkg-item active-pkg">
+                                <div class="pkg-badge">Cel Mai Popular</div>
+                                <div class="pkg-header">
+                                    <h4>Pachet Night Party Exclusiv</h4>
+                                    <span class="pkg-price">De la 900 LEI</span>
+                                </div>
+                                <p>Închiriere Bar & Terasă 18:00 - 02:00. Lumini ghirlandă, acces frigidere, barman opțional & sistem audio.</p>
+                            </div>
+
+                            <div class="pkg-item">
+                                <div class="pkg-header">
+                                    <h4>Pachet Sport + Party (Full Day)</h4>
+                                    <span class="pkg-price">De la 1.400 LEI</span>
+                                </div>
+                                <p>Închiriere Bar toată ziua + 2 ore Teren Fotbal / Tenis incluse pentru invitați!</p>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary btn-block" onclick="openEventModal()">
+                            <i data-lucide="calendar-check"></i> Închiriază Barul Acum
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Calculator Section -->
+    <section class="section-padding" id="tarife">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <span class="badge-sub">TRANSPARENȚĂ TOTALĂ</span>
+                <h2 class="section-title">Tarife & Închirieri</h2>
+                <p class="section-subtitle">Prețuri accesibile adaptate orarului de zi și orarului de nocturnă</p>
+            </div>
+
+            <div class="pricing-tabs-wrapper">
+                <div class="pricing-cards-grid">
+                    <!-- Tennis Pricing Card -->
+                    <div class="pricing-card glass-panel reveal-up reveal-delay-1">
+                        <div class="pricing-header">
+                            <div class="sport-icon icon-orange"><i data-lucide="circle-dot"></i></div>
+                            <h3>Tenis de Câmp</h3>
+                            <p>Terenuri Zgură Roșie</p>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="price-row">
+                                <span>Tarif Zi (08:00 - 18:00)</span>
+                                <strong>60 LEI / oră</strong>
+                            </div>
+                            <div class="price-row">
+                                <span>Tarif Apus / Seară (18:00 - 20:00)</span>
+                                <strong>70 LEI / oră</strong>
+                            </div>
+                            <div class="price-row highlight-row">
+                                <span>Tarif Nocturnă (20:00 - 23:00)</span>
+                                <strong>80 LEI / oră</strong>
+                            </div>
+                            <div class="price-row">
+                                <span>Abonament 10 Ore (Zi)</span>
+                                <strong>500 LEI (-17%)</strong>
+                            </div>
+                            <div class="price-row">
+                                <span>Închiriere Rachete + Mingi</span>
+                                <strong>15 LEI / meci</strong>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-primary btn-block" onclick="openBookingModal('tenis')">
+                            Rezervă Teren Tenis
+                        </button>
+                    </div>
+
+                    <!-- Football Pricing Card -->
+                    <div class="pricing-card glass-panel recommended-card reveal-up reveal-delay-2">
+                        <div class="recommended-badge">Recomandat Grupuri</div>
+                        <div class="pricing-header">
+                            <div class="sport-icon icon-green"><i data-lucide="shield"></i></div>
+                            <h3>Minifotbal Sintetic</h3>
+                            <p>Teren 5v5 & 7v7 cu Nocturnă</p>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="price-row">
+                                <span>Tarif Zi (08:00 - 17:00)</span>
+                                <strong>140 LEI / oră</strong>
+                            </div>
+                            <div class="price-row">
+                                <span>Tarif Seară (17:00 - 19:00)</span>
+                                <strong>160 LEI / oră</strong>
+                            </div>
+                            <div class="price-row highlight-row">
+                                <span>Tarif Nocturnă (19:00 - 23:00)</span>
+                                <strong>180 LEI / oră</strong>
+                            </div>
+                            <div class="price-row">
+                                <span>Minge Meci + Vestiar Dușuri</span>
+                                <strong class="text-green">Inclus Gratuit</strong>
+                            </div>
+                            <div class="price-row">
+                                <span>Abonament Lunar (4 meciuri)</span>
+                                <strong>600 LEI (-15%)</strong>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-block" onclick="openBookingModal('fotbal')">
+                            Rezervă Teren Fotbal
+                        </button>
+                    </div>
+
+                    <!-- Event Bar Pricing Card -->
+                    <div class="pricing-card glass-panel reveal-up reveal-delay-3">
+                        <div class="pricing-header">
+                            <div class="sport-icon icon-gold"><i data-lucide="beer"></i></div>
+                            <h3>Bar & Terasă Outdoor</h3>
+                            <p>Închiriere Evenimente Private</p>
+                        </div>
+                        <div class="pricing-body">
+                            <div class="price-row">
+                                <span>Închiriere Zi (4 ore)</span>
+                                <strong>500 LEI</strong>
+                            </div>
+                            <div class="price-row highlight-row">
+                                <span>Închiriere Seară (6 ore)</span>
+                                <strong>900 LEI</strong>
+                            </div>
+                            <div class="price-row">
+                                <span>Serviciu Barman Dedicat</span>
+                                <strong>150 LEI / eveniment</strong>
+                            </div>
+                            <div class="price-row">
+                                <span>Gratar BBQ + Lemne & Cărbuni</span>
+                                <strong>100 LEI</strong>
+                            </div>
+                            <div class="price-row">
+                                <span>Sound System 1000W Bluetooth</span>
+                                <strong class="text-green">Inclus Gratuit</strong>
+                            </div>
+                        </div>
+                        <button class="btn btn-gold btn-block" onclick="openEventModal()">
+                            Cere Oferta Eveniment
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section-padding gallery-section" id="galerie">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <span class="badge-sub">EXPERIENȚĂ VIZUALĂ</span>
+                <h2 class="section-title">Galerie Foto Complex Sportiv</h2>
+                <p class="section-subtitle">Imagini reale din cadrul bazei noastre din Craiova</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item large-item reveal-up">
+                    <img src="images/hero.png" alt="Complex Sportiv Craiova">
+                    <div class="gallery-overlay">
+                        <h4>Complex Sportiv & Bar Craiova</h4>
+                        <p>Vedere de ansamblu terenuri & terasă</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up reveal-delay-1">
+                    <img src="images/tennis.png" alt="Teren Tenis Zgura Craiova">
+                    <div class="gallery-overlay">
+                        <h4>Teren Tenis Zgură</h4>
+                        <p>Nocturnă LED & zgură profesională</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up reveal-delay-2">
+                    <img src="images/football.png" alt="Teren Fotbal Sintetic">
+                    <div class="gallery-overlay">
+                        <h4>Minifotbal Sintetic</h4>
+                        <p>Gazon rezistent & nocturnă high-bay</p>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up reveal-delay-3">
+                    <img src="images/bar.png" alt="Bar Outdoor Evenimente Private">
+                    <div class="gallery-overlay">
+                        <h4>Bar & Terasă În Aer Liber</h4>
+                        <p>Locul ideal pentru petrecerea ta privată</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding">
+        <div class="container small-container">
+            <div class="section-header text-center reveal-up">
+                <span class="badge-sub">ÎNTREBĂRI FRECVENTE</span>
+                <h2 class="section-title">Tot Ce Trebuie Să Știi</h2>
+            </div>
+
+            <div class="faq-accordion reveal-up reveal-delay-1">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Cum pot face o rezervare rapidă pentru un teren?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Rezervarea se face cel mai rapid online prin apăsarea butonului "Rezervă Teren" sau direct prin trimiterea unui mesaj pe WhatsApp la numărul nostru de telefon. Confirmarea disponibilității este instantă!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Ce include închirierea barului exterior pentru evenimente?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Închirierea barului outdoor oferă acces exclusiv la terasa acoperită și descoperită, mese & scaune lounge, espressor, frigidere profesionale pentru băuturi, zonă amenajată pentru grătar BBQ și sonorizare bluetooth high-power.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Există nocturnă și vestiare la terenuri?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Da! Toate terenurile de tenis și fotbal beneficiază de sistem de iluminat nocturn LED de mare intensitate. De asemenea, vestiarele noastre sunt dotate cu dușuri cu apă caldă și dulapuri individuale securizate.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Care este politica de anulare sau reprogramare?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Rezervările de teren pot fi reprogramate gratuit cu cel puțin 4 ore înainte de ora de începere. În caz de ploaie torențială sau condiții meteo nefavorabile, meciurile de pe terenurile neacoperite pot fi reprogramate fără costuri suplimentare.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact Footer Section -->
+    <footer class="footer-section" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col reveal-up">
+                    <div class="brand-logo">
+                        <div class="logo-icon"><i data-lucide="trophy"></i></div>
+                        <div class="logo-text">
+                            <span class="brand-name">TENIS & SPORTS</span>
+                            <span class="brand-sub">CLUB CRAIOVA</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">
+                        Baza ta sportivă de referință în Craiova. Tenis pe zgură, minifotbal sintetic și un bar exterior spectaculos de închiriat pentru momente de neuitat alături de prieteni.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100057108383351" target="_blank" class="social-btn facebook" aria-label="Facebook Page">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Pagina de Facebook
+                        </a>
+                        <a href="https://maps.app.goo.gl/x16UXfUmBnCwBcjD6" target="_blank" class="social-btn google-maps" aria-label="Google Maps">
+                            <i data-lucide="map-pin"></i> Locație Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col reveal-up reveal-delay-1">
+                    <h4>Program Bază Sportivă</h4>
+                    <ul class="footer-schedule">
+                        <li><span>Luni - Vineri:</span> <strong>08:00 - 23:00</strong></li>
+                        <li><span>Sâmbătă:</span> <strong>08:00 - 23:00</strong></li>
+                        <li><span>Duminică:</span> <strong>08:00 - 23:00</strong></li>
+                        <li class="status-open"><i data-lucide="clock"></i> Nocturnă activă până la 23:00</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col reveal-up reveal-delay-2">
+                    <h4>Contact & Rezervări</h4>
+                    <ul class="footer-contact-info">
+                        <li>
+                            <i data-lucide="phone"></i>
+                            <div>
+                                <small>Telefon Rezervări Directe</small>
+                                <a href="tel:+40700000000">+40 700 000 000</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i data-lucide="message-square"></i>
+                            <div>
+                                <small>WhatsApp Oficial</small>
+                                <a href="https://wa.me/40700000000?text=Buna%20ziua,%20doresc%20detalii" target="_blank">+40 700 000 000</a>
+                            </div>
+                        </li>
+                        <li>
+                            <i data-lucide="map-pin"></i>
+                            <div>
+                                <small>Adresă Locație</small>
+                                <span>Craiova, Județul Dolj, România</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Embedded Interactive Map Card -->
+            <div class="map-banner-card glass-panel reveal-up">
+                <div class="map-info">
+                    <h3><i data-lucide="navigation"></i> Vino Să Ne Vizitezi!</h3>
+                    <p>Suntem ușor accesibili din orice zonă a Craiovei, cu parcare proprie gratuită și supravegheată.</p>
+                </div>
+                <div class="map-actions">
+                    <a href="https://maps.app.goo.gl/x16UXfUmBnCwBcjD6" target="_blank" class="btn btn-primary btn-lg">
+                        <i data-lucide="map"></i> Deschide Traseu pe Waze / Google Maps
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom text-center">
+                <p>&copy; 2026 Tenis & Sports Club Craiova. Toate drepturile rezervate. Optimizat conform ghidului UI/UX Pro Max.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal Dialog -->
+    <div class="modal-backdrop" id="bookingModal">
+        <div class="modal-container glass-panel">
+            <button class="modal-close" onclick="closeBookingModal()" aria-label="Închide dialog"><i data-lucide="x"></i></button>
+            <div class="modal-header">
+                <h3><i data-lucide="calendar"></i> Rezervare Teren Sportiv</h3>
+                <p>Selectează detaliile meciului tău și trimite solicitarea directă</p>
+            </div>
+            
+            <form id="modalBookingForm" onsubmit="handleModalBooking(event)">
+                <div class="form-row">
+                    <div class="form-group col-6">
+                        <label>Sport & Suprafață</label>
+                        <select id="modalSport" onchange="updateModalPrice()">
+                            <option value="tenis">Tenis (Zgură Roșie)</option>
+                            <option value="fotbal">Minifotbal (Sintetic)</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-6">
+                        <label>Data Meciului</label>
+                        <input type="date" id="modalDate" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-6">
+                        <label>Ora de Început</label>
+                        <select id="modalTime" onchange="updateModalPrice()">
+                            <option value="09:00">09:00 AM (Zi)</option>
+                            <option value="11:00">11:00 AM (Zi)</option>
+                            <option value="15:00">15:00 PM (Zi)</option>
+                            <option value="18:00">18:00 PM (Apus)</option>
+                            <option value="19:00">19:00 PM (Nocturnă)</option>
+                            <option value="20:00">20:00 PM (Nocturnă)</option>
+                            <option value="21:00">21:00 PM (Nocturnă)</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-6">
+                        <label>Durată Meci</label>
+                        <select id="modalDuration" onchange="updateModalPrice()">
+                            <option value="1">1 Oră</option>
+                            <option value="1.5">1.5 Ore</option>
+                            <option value="2">2 Ore</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Nume & Prenume Client</label>
+                    <input type="text" id="modalName" placeholder="Ex: Alexandru Popescu" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Număr de Telefon</label>
+                    <input type="tel" id="modalPhone" placeholder="Ex: 0722 123 456" required>
+                </div>
+
+                <div class="form-group modal-price-box">
+                    <span>Total Estimat:</span>
+                    <strong id="modalPriceTotal">60 LEI</strong>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-lg">
+                    <i data-lucide="send"></i> Trimite Rezervarea pe WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Event Rental Modal Dialog -->
+    <div class="modal-backdrop" id="eventModal">
+        <div class="modal-container glass-panel-gold">
+            <button class="modal-close" onclick="closeEventModal()" aria-label="Închide dialog"><i data-lucide="x"></i></button>
+            <div class="modal-header">
+                <h3><i data-lucide="glass-water"></i> Solicitare Închiriere Bar Outdoor</h3>
+                <p>Organizează un eveniment privat memorabil în aer liber</p>
+            </div>
+            
+            <form id="modalEventForm" onsubmit="handleModalEvent(event)">
+                <div class="form-group">
+                    <label>Tipul Evenimentului</label>
+                    <select id="eventType">
+                        <option value="Zi de Naștere / Aniversare">Zi de Naștere / Aniversare</option>
+                        <option value="Majorat / Petrecere Privată">Majorat / Petrecere Privată</option>
+                        <option value="Teambuilding / Corporate">Teambuilding / Corporate Firmă</option>
+                        <option value="Vizionare Meci / Turneu Sportiv">Vizionare Meci / Turneu Sportiv</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-6">
+                        <label>Data Evenimentului</label>
+                        <input type="date" id="eventDate" required>
+                    </div>
+                    <div class="form-group col-6">
+                        <label>Număr Invitați</label>
+                        <select id="eventGuests">
+                            <option value="10-25 persoane">10 - 25 persoane</option>
+                            <option value="25-50 persoane">25 - 50 persoane</option>
+                            <option value="50-100+ persoane">50 - 100+ persoane</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Servicii Opționale Dorite</label>
+                    <div class="checkbox-grid">
+                        <label class="checkbox-card">
+                            <input type="checkbox" id="optGrill" value="Zona Gratar BBQ">
+                            <span><i data-lucide="flame"></i> Zonă Grătar BBQ</span>
+                        </label>
+                        <label class="checkbox-card">
+                            <input type="checkbox" id="optBarman" value="Barman Dedicat">
+                            <span><i data-lucide="beer"></i> Barman Dedicat</span>
+                        </label>
+                        <label class="checkbox-card">
+                            <input type="checkbox" id="optSport" value="Ore Teren Sportiv">
+                            <span><i data-lucide="trophy"></i> Pachet Meci Teren</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Nume / Contact Persoană Organizatoare</label>
+                    <input type="text" id="eventName" placeholder="Numele tău și număr de telefon" required>
+                </div>
+
+                <button type="submit" class="btn btn-gold btn-block btn-lg">
+                    <i data-lucide="send"></i> Trimite Solicitarea pe WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions">
+        <a href="https://wa.me/40700000000?text=Buna%20ziua,%20am%20o%20intrebare" target="_blank" class="float-btn float-wa" title="WhatsApp Rapid" aria-label="WhatsApp Rapid">
+            <i data-lucide="message-square"></i>
+        </a>
+        <a href="tel:+40700000000" class="float-btn float-phone" title="Apelează Acum" aria-label="Apelează Acum">
+            <i data-lucide="phone"></i>
+        </a>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
